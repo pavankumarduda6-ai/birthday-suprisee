@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            color: white;
+            font-family: Arial;
+
+            /* 🔥 FULL IMAGE WITHOUT CROP */
+            background: url('love.jpg') no-repeat center center;
+            background-size: contain;
+            background-color: black;
+            height: 100vh;
+        }
+
+        .overlay {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        #text {
+            font-size: 18px;
+            max-width: 80%;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background: pink;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+    <h1>Happy Birthday Jyosthana ❤️</h1>
+    <p id="text"></p>
+
+    <button onclick="playMusic()">Click Here 💖</button>
+</div>
+
+<audio id="bgmusic" loop>
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let message = "You are the most special person in my life 💖 I may not say it always but I really like you 🥰. Naaku telidhu neetho life long vuntano ledho kaani nenu neetho vunde prathi second ni oka manchi memory ga vundali ane korukuntanu. Nee prathi kastam lo kaani nee prathi happiness lo kaani nenu vundali adhi lifelong. Future ni predict cheyalem kaani mana raathani matram raasukogalam. Nuvvu em chesina adhi entho alochinche chestav ani naa gatti nammakam. Nuvvu anukundi saadhinchu nennu entha varaku ayina nee kosam wait chestanu. Evari maatlu pattinchukoku kevalam nee parents maatlu matram vinu endukante neeku e kastam vachina modata neeku memmu vunnam ane dairayam ichedi vaale ga. Vaala nammakani kolupoku. Naaku eppatiki appataki okate telusu NUVVU DAGGARA GA VUNNAPPUDU ANANDA PADATAM NUVVU DHOORAM GA VUNNAPPUDU BADHA PADATAM. I WISH YOU HAPPY BIRTHDAY MY PAPA 🥰 KEEP SMILE ALWAYS AND STAY STRONG. FROM YOUR PAVAN 💖";
+
+let i = 0;
+
+function typeEffect() {
+    if (i < message.length) {
+        document.getElementById("text").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeEffect, 25);
+    }
+}
+
+typeEffect();
+
+function playMusic() {
+    document.getElementById("bgmusic").play();
+}
+</script>
+
+</body>
+</html>
